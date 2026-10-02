@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dishubh Singh | ML & Web Developer</title>
+<meta name="description" content="Student building machine learning projects and web apps. Train ETA prediction, plant identification from leaf images, and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b1626;--panel:#10213a;--line:#25395a;--text:#e9eef6;--mute:#9fb0c8;--amber:#ffb000;--green:#4be08a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 "IBM Plex Sans",system-ui,sans-serif}
+a{color:inherit}a:focus-visible,button:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+header.top{padding:28px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.logo{font-family:"Bricolage Grotesque";font-weight:800;text-decoration:none}
+nav a{margin-left:20px;text-decoration:none;color:var(--mute)}nav a:hover{color:var(--amber)}
+.hero{padding:56px 0 40px}
+.hero h1{font-size:clamp(44px,8vw,92px);font-weight:800;letter-spacing:-.03em}
+.hero h1 span{color:var(--amber)}
+.hero p{max-width:60ch;color:var(--mute);font-size:20px;margin:22px 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:12px 22px;border-radius:6px;border:1px solid var(--line);text-decoration:none;font-weight:500;background:none;color:var(--text);font:inherit;font-weight:500;cursor:pointer}
+.btn.primary{background:var(--amber);color:#1a1200;border-color:var(--amber)}
+.btn:hover{border-color:var(--amber)}
+section{padding:48px 0}
+h2{font-size:clamp(28px,4vw,40px);margin-bottom:8px}
+.sub{color:var(--mute);margin:0 0 28px}
+.board{background:#070f1c;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.board .head,.board .row{display:grid;grid-template-columns:1.2fr 2.4fr 1.2fr 110px;gap:16px;padding:16px 22px;align-items:center}
+.board .head{background:var(--panel);font:500 13px "IBM Plex Mono",monospace;color:var(--amber);letter-spacing:.06em}
+.board .row{border-top:1px solid var(--line);text-decoration:none;transition:background .2s}
+.board .row:hover{background:#0e2038}
+.row h3{font-size:20px}.row p{margin:0;color:var(--mute);font-size:15px;line-height:1.5}
+.tag{font:500 13px "IBM Plex Mono",monospace;color:var(--text)}
+.st{font:500 13px "IBM Plex Mono",monospace;color:var(--green);display:flex;align-items:center;gap:8px}
+.st::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green)}
+.st.fork{color:var(--amber)}.st.fork::before{background:var(--amber)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.skills h3{font-size:19px;margin-bottom:10px;color:var(--amber)}
+.skills ul{list-style:none;margin:0;padding:0;color:var(--mute)}
+.skills li{padding:6px 0;border-bottom:1px solid var(--line)}
+.tl{border-left:2px solid var(--line);padding-left:22px}
+.tl h3{font-size:20px}.tl p{margin:4px 0 0;color:var(--mute)}
+footer{border-top:1px solid var(--line);padding:36px 0 60px;color:var(--mute);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:var(--text)}
+@media(max-width:760px){.board .head{display:none}.board .row{grid-template-columns:1fr;gap:6px}nav a{margin:0 16px 0 0}}
+@media(prefers-reduced-motion:no-preference){.hero h1{animation:rise .7s ease both}@keyframes rise{from{opacity:0;transform:translateY(14px)}}}
+@media print{body{background:#fff;color:#111;font-size:12px}.top nav,.btns,footer a{display:none}.board,.board .head{background:#fff;border-color:#bbb}.hero h1,h3{color:#111}.hero p,.row p,.sub,.skills ul{color:#333}.hero h1 span,.skills h3,.head{color:#8a5a00}section{padding:16px 0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="logo" href="#">Dishubh Singh</a>
+  <nav><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main>
+<div class="hero">
+  <h1>Dishubh Singh<br><span>builds ML and web projects.</span></h1>
+  <p>Student developer working on machine learning and the web: predicting train arrival times, identifying plants from leaf images, and shipping responsive sites for real businesses.</p>
+  <div class="btns">
+    <a class="btn primary" href="#projects">See my projects</a>
+    <a class="btn" href="https://github.com/Maegortargaryn">GitHub profile</a>
+    <button class="btn" onclick="window.print()">Save as PDF</button>
+  </div>
+</div>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <p class="sub">Selected work from my GitHub, listed like a timetable. Select a row to open the repository.</p>
+  <div class="board" role="list">
+    <div class="head" aria-hidden="true"><span>PROJECT</span><span>WHAT IT DOES</span><span>BUILT WITH</span><span>STATUS</span></div>
+    <a class="row" role="listitem" href="https://github.com/Maegortargaryn/Dynamic-eta-prediction-for-Trains">
+      <h3>Train ETA Prediction</h3>
+      <p>Predicts train arrival times from historical station data and delay patterns, with a live dashboard showing schedule, predicted delay and ETA for each station.</p>
+      <span class="tag">CatBoost, Python, JavaScript</span><span class="st">Live</span></a>
+    <a class="row" role="listitem" href="https://github.com/Maegortargaryn/dynamic-railway-eta">
+      <h3>Dynamic Railway ETA</h3>
+      <p>ETA forecasting and delay propagation engine for coaching trains, built for the SIH26028 problem statement.</p>
+      <span class="tag">Python</span><span class="st fork">Team fork</span></a>
+    <a class="row" role="listitem" href="https://github.com/Maegortargaryn/LeafLens">
+      <h3>LeafLens</h3>
+      <p>Identifies Indian plants and trees from a leaf photo using shape and texture, then shows useful details about the species.</p>
+      <span class="tag">Machine learning, Jupyter</span><span class="st">Built</span></a>
+    <a class="row" role="listitem" href="https://github.com/Maegortargaryn/Personal-Website">
+      <h3>Dairy Website</h3>
+      <p>Responsive bilingual website for Sardar Vallabh Bhai Patel Dairy, with a dark-mode interface and direct WhatsApp ordering.</p>
+      <span class="tag">React, Vite, JavaScript</span><span class="st">Built</span></a>
+    <a class="row" role="listitem" href="https://github.com/Maegortargaryn/Amazon-ML-Hackathon">
+      <h3>Amazon ML Hackathon</h3>
+      <p>End-to-end machine learning pipeline with automated preprocessing, configurable model training and simple deployment.</p>
+      <span class="tag">Python</span><span class="st">Built</span></a>
+    <a class="row" role="listitem" href="https://github.com/Maegortargaryn/Neon_Aurora_Edge_Theme">
+      <h3>Neon Aurora Edge Theme</h3>
+      <p>True-black OLED theme for Microsoft Edge with a neon aurora New Tab, a highlighted open tab and neon address bar text.</p>
+      <span class="tag">Browser theme</span><span class="st">Released</span></a>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <p class="sub">What I use in the projects above.</p>
+  <div class="skills">
+    <div><h3>Machine learning</h3><ul><li>Python</li><li>CatBoost, LSTM and GRU experiments</li><li>Jupyter notebooks</li><li>Data preprocessing and model training</li></ul></div>
+    <div><h3>Web</h3><ul><li>HTML, CSS, JavaScript</li><li>React and Vite</li><li>Responsive and bilingual interfaces</li><li>GitHub Pages and Actions</li></ul></div>
+    <div><h3>Tools</h3><ul><li>Git and GitHub</li><li>Static dashboards from CSV data</li><li>Browser themes</li></ul></div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About</h2>
+  <p class="sub">Education</p>
+  <div class="tl"><h3>[Degree and course]</h3><p>[College or university], [start year] to [expected year]</p></div>
+  <p class="sub" style="margin-top:28px">Hackathons</p>
+  <div class="tl"><h3>Amazon ML Hackathon and SIH26028</h3><p>Worked on ETA prediction and ML pipeline problems; both projects are on GitHub.</p></div>
+</section>
+</main>
+
+<footer id="contact">
+  <div>Open to internships and projects.<br>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></div>
+  <div><a href="https://github.com/Maegortargaryn">GitHub</a> &nbsp; <a href="https://www.linkedin.com/in/your-handle">LinkedIn</a></div>
+</footer>
+</div>
+</body>
+</html>
